@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Social Media Marketing | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Social Media Marketing</h1>
+    <p class="text-white">Build meaningful connections with your audience and grow your brand presence across Instagram, YouTube, Facebook, and LinkedIn.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- Main Content -->
+    <div class="col-lg-8">
+      <h2 class="section-title text-gradient mb-4">Social Media Strategy</h2>
+      <p class="lead">We create engaging social media campaigns that drive brand awareness, increase engagement, and generate leads across all major platforms.</p>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-instagram fa-3x text-danger mb-3"></i>
+              <h5 class="card-title">Instagram Marketing</h5>
+              <p class="card-text">Visual content strategy, stories, reels, IGTV, influencer partnerships, and hashtag optimization for maximum engagement.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-youtube fa-3x text-danger mb-3"></i>
+              <h5 class="card-title">YouTube Marketing</h5>
+              <p class="card-text">Video content strategy, channel optimization, SEO for videos, live streaming, and YouTube Shorts for brand visibility.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-facebook fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Facebook Marketing</h5>
+              <p class="card-text">Page management, content creation, paid advertising, community engagement, and Facebook Groups strategies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-linkedin fa-3x text-info mb-3"></i>
+              <h5 class="card-title">LinkedIn Marketing</h5>
+              <p class="card-text">B2B marketing, thought leadership content, company page optimization, networking strategies, and LinkedIn Ads.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5">
+        <h3 class="text-gradient">Our Social Media Services Include:</h3>
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Content Strategy & Planning</li>
+              <li><i class="fas fa-check text-success me-2"></i>Community Management</li>
+              <li><i class="fas fa-check text-success me-2"></i>Paid Social Advertising</li>
+              <li><i class="fas fa-check text-success me-2"></i>Influencer Partnerships</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Social Media Audits</li>
+              <li><i class="fas fa-check text-success me-2"></i>Performance Analytics</li>
+              <li><i class="fas fa-check text-success me-2"></i>Crisis Management</li>
+              <li><i class="fas fa-check text-success me-2"></i>Brand Voice Development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5">
+        <h3 class="text-gradient">Platform-Specific Expertise:</h3>
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fab fa-instagram text-danger me-2"></i>Instagram Stories & Reels</li>
+              <li><i class="fab fa-youtube text-danger me-2"></i>YouTube SEO & Optimization</li>
+              <li><i class="fab fa-facebook text-primary me-2"></i>Facebook Groups & Pages</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fab fa-linkedin text-info me-2"></i>LinkedIn Company Pages</li>
+              <li><i class="fas fa-hashtag text-warning me-2"></i>Hashtag Strategy</li>
+              <li><i class="fas fa-chart-line text-success me-2"></i>Cross-Platform Analytics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Why Social Media?</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-users text-success me-2"></i>Build Brand Awareness</li>
+            <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i>Increase Engagement</li>
+            <li class="mb-2"><i class="fas fa-bullseye text-success me-2"></i>Target Specific Audiences</li>
+            <li class="mb-2"><i class="fas fa-handshake text-success me-2"></i>Customer Relationship Building</li>
+            <li class="mb-2"><i class="fas fa-dollar-sign text-success me-2"></i>Cost-Effective Marketing</li>
+          </ul>
+          
+          <div class="mt-4">
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary w-100">Start Social Media Campaign</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card border-0 shadow-sm mt-3">
+        <div class="card-body">
+          <h6 class="card-title text-info">Free Social Media Audit</h6>
+          <p class="card-text small">Get a comprehensive analysis of your social media presence and discover optimization opportunities.</p>
+          <a href="{{ url_for('main.contact') }}" class="btn btn-outline-info btn-sm w-100">Request Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h1 class="mb-4">Our Services</h1>
+  <p class="lead">Choose from our wide range of expertise:</p>
+
+  <ul class="list-group">
+    <li class="list-group-item">
+      <a href="{{ url_for('main.events') }}">Events</a>
+    </li>
+    <li class="list-group-item">
+      <a href="{{ url_for('main.webdev') }}">Web Development</a>
+    </li>
+    <li class="list-group-item">
+      <a href="{{ url_for('main.marketing') }}">Marketing</a>
+    </li>
+  </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Content Marketing | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Content Marketing</h1>
+    <p class="text-white">Create valuable, engaging content that attracts, educates, and converts your target audience.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- Main Content -->
+    <div class="col-lg-8">
+      <h2 class="section-title text-gradient mb-4">Content Strategy & Creation</h2>
+      <p class="lead">We develop comprehensive content marketing strategies that position your brand as an industry thought leader and drive sustainable growth.</p>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-blog fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Blog & Articles</h5>
+              <p class="card-text">SEO-optimized blog posts, industry insights, and thought leadership content that ranks and engages.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-video fa-3x text-danger mb-3"></i>
+              <h5 class="card-title">Video Content</h5>
+              <p class="card-text">YouTube videos, explainer videos, product demos, and live streaming content for maximum engagement.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-infographic fa-3x text-success mb-3"></i>
+              <h5 class="card-title">Infographics & Visuals</h5>
+              <p class="card-text">Eye-catching infographics, social media graphics, and visual content that simplifies complex information.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-book fa-3x text-warning mb-3"></i>
+              <h5 class="card-title">E-books & Whitepapers</h5>
+              <p class="card-text">In-depth resources, guides, and downloadable content that captures leads and builds authority.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5">
+        <h3 class="text-gradient">Content Marketing Services:</h3>
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Content Strategy Development</li>
+              <li><i class="fas fa-check text-success me-2"></i>Editorial Calendar Planning</li>
+              <li><i class="fas fa-check text-success me-2"></i>SEO Content Creation</li>
+              <li><i class="fas fa-check text-success me-2"></i>Content Distribution</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Content Performance Analysis</li>
+              <li><i class="fas fa-check text-success me-2"></i>Brand Voice Development</li>
+              <li><i class="fas fa-check text-success me-2"></i>Content Repurposing</li>
+              <li><i class="fas fa-check text-success me-2"></i>Lead Magnet Creation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Content Marketing Benefits</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-search text-success me-2"></i>Better SEO Rankings</li>
+            <li class="mb-2"><i class="fas fa-users text-success me-2"></i>Increased Brand Awareness</li>
+            <li class="mb-2"><i class="fas fa-handshake text-success me-2"></i>Builds Trust & Authority</li>
+            <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i>Long-term ROI</li>
+            <li class="mb-2"><i class="fas fa-bullseye text-success me-2"></i>Targeted Audience Engagement</li>
+          </ul>
+          
+          <div class="mt-4">
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary w-100">Start Content Strategy</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card border-0 shadow-sm mt-3">
+        <div class="card-body">
+          <h6 class="card-title text-info">Content Audit</h6>
+          <p class="card-text small">Get a comprehensive analysis of your existing content and discover optimization opportunities.</p>
+          <a href="{{ url_for('main.contact') }}" class="btn btn-outline-info btn-sm w-100">Request Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

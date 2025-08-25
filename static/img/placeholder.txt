@@ -1,0 +1,11 @@
+This directory contains images for the Aura website.
+
+You can add:
+- favicon.ico (website icon)
+- logo.png (company logo)
+- hero-bg.jpg (hero section background)
+- service images
+- team photos
+- etc.
+
+For now, the website will use FontAwesome icons instead of images.

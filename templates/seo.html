@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}SEO Services | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-white">SEO Services</h1>
+    <p class="text-white">Boost your website's visibility and drive organic traffic with our expert SEO strategies.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- SEO Overview -->
+    <div class="col-lg-8">
+      <h2 class="section-title text-gradient mb-4">Search Engine Optimization</h2>
+      <p class="lead">We help businesses improve their search engine rankings and increase organic traffic through comprehensive SEO strategies.</p>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-search fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Technical SEO</h5>
+              <p class="card-text">Website optimization, speed improvements, mobile responsiveness, and technical audits.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-keyboard fa-3x text-success mb-3"></i>
+              <h5 class="card-title">On-Page SEO</h5>
+              <p class="card-text">Content optimization, meta tags, keyword research, and internal linking strategies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-link fa-3x text-warning mb-3"></i>
+              <h5 class="card-title">Off-Page SEO</h5>
+              <p class="card-text">Link building, social signals, brand mentions, and online reputation management.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-chart-line fa-3x text-info mb-3"></i>
+              <h5 class="card-title">Local SEO</h5>
+              <p class="card-text">Google My Business optimization, local citations, and location-based targeting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Why Choose Our SEO?</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Proven Results</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>White-Hat Techniques</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Regular Reporting</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dedicated Support</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Competitive Pricing</li>
+          </ul>
+          
+          <div class="mt-4">
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary w-100">Get SEO Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

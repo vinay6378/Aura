@@ -1,0 +1,814 @@
+{% extends "base.html" %}
+{% block title %}Software Development - Aura{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Code Rain Effect -->
+<section class="hero-section position-relative overflow-hidden">
+  <div class="code-rain">
+    <div class="rain-drop" data-speed="3">01</div>
+    <div class="rain-drop" data-speed="5">10</div>
+    <div class="rain-drop" data-speed="2">11</div>
+    <div class="rain-drop" data-speed="4">00</div>
+    <div class="rain-drop" data-speed="6">01</div>
+    <div class="rain-drop" data-speed="3">10</div>
+    <div class="rain-drop" data-speed="5">11</div>
+    <div class="rain-drop" data-speed="2">00</div>
+    <div class="rain-drop" data-speed="4">01</div>
+    <div class="rain-drop" data-speed="6">10</div>
+  </div>
+  <div class="container text-center position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold mb-4 fade-in">
+          <span class="text-gradient">Software Development</span>
+        </h1>
+        <p class="lead mb-4 fade-in">We don't just write code – we craft <strong>digital solutions</strong> that transform businesses, streamline operations, and create competitive advantages that last.</p>
+        <div class="software-stats mb-4">
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="75">0</div>
+                <div class="stat-label">Apps Built</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="99">0</div>
+                <div class="stat-label">% Success Rate</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Hours Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg fade-in pulse-animation">
+          <i class="fas fa-rocket me-2"></i>Start Your Project
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Services Showcase -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">What We Build</h2>
+        <p class="section-subtitle">Choose your software weapon of choice</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="software-service-card h-100" data-service="desktop">
+          <div class="card-front">
+            <div class="service-header bg-gradient-primary">
+              <i class="fas fa-desktop fa-4x text-white"></i>
+              <div class="service-badge">Popular</div>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="fas fa-desktop me-2 text-primary"></i>Desktop Applications
+              </h5>
+              <p class="card-text">Cross-platform desktop software that works seamlessly on Windows, macOS, and Linux.</p>
+              <div class="tech-stack">
+                <span class="badge bg-light text-dark me-1">Electron</span>
+                <span class="badge bg-light text-dark me-1">Qt</span>
+                <span class="badge bg-light text-dark">.NET</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-body text-center">
+              <h5>Desktop Features</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Cross-platform compatibility</li>
+                <li><i class="fas fa-check text-success me-2"></i>Offline functionality</li>
+                <li><i class="fas fa-check text-success me-2"></i>Native performance</li>
+                <li><i class="fas fa-check text-success me-2"></i>Auto-updates</li>
+              </ul>
+              <button class="btn btn-primary btn-sm flip-back">Flip Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="software-service-card h-100" data-service="mobile">
+          <div class="card-front">
+            <div class="service-header bg-gradient-success">
+              <i class="fas fa-mobile-alt fa-4x text-white"></i>
+              <div class="service-badge">Trending</div>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="fas fa-mobile-alt me-2 text-success"></i>Mobile Applications
+              </h5>
+              <p class="card-text">Native and cross-platform mobile apps that users love and businesses rely on.</p>
+              <div class="tech-stack">
+                <span class="badge bg-light text-dark me-1">React Native</span>
+                <span class="badge bg-light text-dark me-1">Flutter</span>
+                <span class="badge bg-light text-dark">Swift/Kotlin</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-body text-center">
+              <h5>Mobile Features</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>iOS & Android support</li>
+                <li><i class="fas fa-check text-success me-2"></i>Push notifications</li>
+                <li><i class="fas fa-check text-success me-2"></i>Offline sync</li>
+                <li><i class="fas fa-check text-success me-2"></i>App store optimization</li>
+              </ul>
+              <button class="btn btn-success btn-sm flip-back">Flip Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="software-service-card h-100" data-service="automation">
+          <div class="card-front">
+            <div class="service-header bg-gradient-warning">
+              <i class="fas fa-cogs fa-4x text-white"></i>
+              <div class="service-badge">Hot</div>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="fas fa-cogs me-2 text-warning"></i>Business Automation
+              </h5>
+              <p class="card-text">Custom software that automates processes and eliminates manual work forever.</p>
+              <div class="tech-stack">
+                <span class="badge bg-light text-dark me-1">Python</span>
+                <span class="badge bg-light text-dark me-1">Node.js</span>
+                <span class="badge bg-light text-dark">RPA</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-body text-center">
+              <h5>Automation Features</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Process automation</li>
+                <li><i class="fas fa-check text-success me-2"></i>Workflow management</li>
+                <li><i class="fas fa-check text-success me-2"></i>API integration</li>
+                <li><i class="fas fa-check text-success me-2"></i>Real-time monitoring</li>
+              </ul>
+              <button class="btn btn-warning btn-sm flip-back">Flip Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Development Process with Interactive Timeline -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Our Development Journey</h2>
+        <p class="section-subtitle">From idea to deployment in 6 exciting phases</p>
+      </div>
+    </div>
+    
+    <div class="development-timeline">
+      <div class="timeline-item" data-phase="1">
+        <div class="timeline-marker bg-primary">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Discovery & Research</h5>
+          <p>We dive deep into your business, understand your goals, and research your competition to create a winning strategy.</p>
+          <div class="timeline-duration">Week 1</div>
+          <div class="timeline-tools">
+            <span class="tool-tag">Interviews</span>
+            <span class="tool-tag">Market Research</span>
+            <span class="tool-tag">Requirements</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-phase="2">
+        <div class="timeline-marker bg-success">
+          <i class="fas fa-pencil-ruler"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Design & Prototyping</h5>
+          <p>Our designers create stunning mockups and interactive prototypes that bring your vision to life.</p>
+          <div class="timeline-duration">Week 2-3</div>
+          <div class="timeline-tools">
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">Prototyping</span>
+            <span class="tool-tag">UX Design</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-phase="3">
+        <div class="timeline-marker bg-warning">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Development & Testing</h5>
+          <p>Our developers code your software using the latest technologies and best practices for optimal performance.</p>
+          <div class="timeline-duration">Week 4-6</div>
+          <div class="timeline-tools">
+            <span class="tool-tag">Agile</span>
+            <span class="tool-tag">Testing</span>
+            <span class="tool-tag">Code Review</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-phase="4">
+        <div class="timeline-marker bg-info">
+          <i class="fas fa-vial"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Quality Assurance</h5>
+          <p>Rigorous testing across all platforms and devices to ensure everything works perfectly.</p>
+          <div class="timeline-duration">Week 7</div>
+          <div class="timeline-tools">
+            <span class="tool-tag">Unit Tests</span>
+            <span class="tool-tag">Integration</span>
+            <span class="tool-tag">Performance</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-phase="5">
+        <div class="timeline-marker bg-danger">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Deployment & Launch</h5>
+          <p>We launch your software with a bang! Optimized deployment, monitoring, and performance tracking included.</p>
+          <div class="timeline-duration">Week 8</div>
+          <div class="timeline-tools">
+            <span class="tool-tag">CI/CD</span>
+            <span class="tool-tag">Monitoring</span>
+            <span class="tool-tag">Analytics</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-phase="6">
+        <div class="timeline-marker bg-dark">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Support & Maintenance</h5>
+          <p>Ongoing support, updates, and maintenance to keep your software running smoothly and securely.</p>
+          <div class="timeline-duration">Ongoing</div>
+          <div class="timeline-tools">
+            <span class="tool-tag">24/7 Support</span>
+            <span class="tool-tag">Updates</span>
+            <span class="tool-tag">Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technologies Showcase with Hover Effects -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Tech Stack Arsenal</h2>
+        <p class="section-subtitle">We use cutting-edge technologies to build future-proof software</p>
+      </div>
+    </div>
+    
+    <div class="tech-showcase">
+      <div class="tech-category">
+        <h6 class="text-primary mb-3">
+          <i class="fas fa-code me-2"></i>Programming Languages
+        </h6>
+        <div class="tech-grid">
+          <div class="tech-item" data-tech="Python">
+            <i class="fab fa-python fa-3x text-primary"></i>
+            <span>Python</span>
+            <div class="tech-description">Versatile language for automation and AI</div>
+          </div>
+          <div class="tech-item" data-tech="JavaScript">
+            <i class="fab fa-js-square fa-3x text-warning"></i>
+            <span>JavaScript</span>
+            <div class="tech-description">Full-stack development powerhouse</div>
+          </div>
+          <div class="tech-item" data-tech="Java">
+            <i class="fab fa-java fa-3x text-danger"></i>
+            <span>Java</span>
+            <div class="tech-description">Enterprise-grade applications</div>
+          </div>
+          <div class="tech-item" data-tech="C#">
+            <i class="fas fa-hashtag fa-3x text-primary"></i>
+            <span>C#</span>
+            <div class="tech-description">Microsoft ecosystem development</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h6 class="text-success mb-3">
+          <i class="fas fa-layer-group me-2"></i>Frameworks & Tools
+        </h6>
+        <div class="tech-grid">
+          <div class="tech-item" data-tech="React Native">
+            <i class="fab fa-react fa-3x text-info"></i>
+            <span>React Native</span>
+            <div class="tech-description">Cross-platform mobile development</div>
+          </div>
+          <div class="tech-item" data-tech="Flutter">
+            <i class="fas fa-mobile-alt fa-3x text-info"></i>
+            <span>Flutter</span>
+            <div class="tech-description">Google's UI toolkit</div>
+          </div>
+          <div class="tech-item" data-tech=".NET">
+            <i class="fas fa-dot-circle fa-3x text-primary"></i>
+            <span>.NET</span>
+            <div class="tech-description">Microsoft development platform</div>
+          </div>
+          <div class="tech-item" data-tech="Django">
+            <i class="fas fa-leaf fa-3x text-success"></i>
+            <span>Django</span>
+            <div class="tech-description">Python web framework</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h6 class="text-warning mb-3">
+          <i class="fas fa-database me-2"></i>Databases & Cloud
+        </h6>
+        <div class="tech-grid">
+          <div class="tech-item" data-tech="PostgreSQL">
+            <i class="fas fa-database fa-3x text-primary"></i>
+            <span>PostgreSQL</span>
+            <div class="tech-description">Advanced open-source database</div>
+          </div>
+          <div class="tech-item" data-tech="MongoDB">
+            <i class="fas fa-leaf fa-3x text-success"></i>
+            <span>MongoDB</span>
+            <div class="tech-description">NoSQL document database</div>
+          </div>
+          <div class="tech-item" data-tech="AWS">
+            <i class="fab fa-aws fa-3x text-warning"></i>
+            <span>AWS</span>
+            <div class="tech-description">Cloud infrastructure leader</div>
+          </div>
+          <div class="tech-item" data-tech="Docker">
+            <i class="fab fa-docker fa-3x text-info"></i>
+            <span>Docker</span>
+            <div class="tech-description">Containerization platform</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section with Floating Elements -->
+<section class="py-5 bg-primary text-white position-relative overflow-hidden">
+  <div class="floating-elements">
+    <div class="floating-element fe-1"></div>
+    <div class="floating-element fe-2"></div>
+    <div class="floating-element fe-3"></div>
+  </div>
+  <div class="container text-center position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="mb-4">Ready to Build Something Amazing?</h2>
+        <p class="lead mb-4">Let's discuss your project and turn your vision into reality with custom software development that drives results.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="{{ url_for('main.contact') }}" class="btn btn-light btn-lg pulse-animation">
+            <i class="fas fa-paper-plane me-2"></i>Start Your Project
+          </a>
+          <a href="{{ url_for('main.webdev') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-code me-2"></i>Web Development
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS for Software Development Page -->
+<style>
+.code-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.rain-drop {
+  position: absolute;
+  color: rgba(0, 255, 0, 0.3);
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: code-fall linear infinite;
+}
+
+.rain-drop:nth-child(1) { left: 10%; animation-duration: 3s; animation-delay: 0s; }
+.rain-drop:nth-child(2) { left: 20%; animation-duration: 5s; animation-delay: 1s; }
+.rain-drop:nth-child(3) { left: 30%; animation-duration: 2s; animation-delay: 2s; }
+.rain-drop:nth-child(4) { left: 40%; animation-duration: 4s; animation-delay: 0.5s; }
+.rain-drop:nth-child(5) { left: 50%; animation-duration: 6s; animation-delay: 1.5s; }
+.rain-drop:nth-child(6) { left: 60%; animation-duration: 3s; animation-delay: 2.5s; }
+.rain-drop:nth-child(7) { left: 70%; animation-duration: 5s; animation-delay: 0.8s; }
+.rain-drop:nth-child(8) { left: 80%; animation-duration: 2s; animation-delay: 1.8s; }
+.rain-drop:nth-child(9) { left: 90%; animation-duration: 4s; animation-delay: 0.3s; }
+.rain-drop:nth-child(10) { left: 95%; animation-duration: 6s; animation-delay: 1.2s; }
+
+@keyframes code-fall {
+  0% { top: -50px; opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+.software-stats {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  color: white;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.software-service-card {
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+}
+
+.software-service-card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.software-service-card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.service-header {
+  position: relative;
+  padding: 30px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+
+.service-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.development-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.development-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 55%;
+}
+
+.timeline-duration {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.timeline-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tool-tag {
+  background: #f8f9fa;
+  color: #667eea;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-showcase {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-category {
+  margin-bottom: 50px;
+}
+
+.tech-category h6 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.tech-item {
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.tech-item:hover::before {
+  left: 100%;
+}
+
+.tech-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.tech-item span {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.tech-description {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+}
+
+.tech-item:hover .tech-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floating-element {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+.fe-1 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.fe-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 6s;
+}
+
+.fe-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 30%;
+  animation-delay: 12s;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-40px) rotate(180deg) scale(1.1); }
+}
+</style>
+
+<!-- JavaScript for Software Development Page -->
+<script>
+// Animated Counter
+function animateCounter(element, target) {
+  let current = 0;
+  const increment = target / 100;
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    element.textContent = Math.floor(current);
+  }, 20);
+}
+
+// Initialize counters when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const counters = document.querySelectorAll('.stat-number');
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    animateCounter(counter, target);
+  });
+  
+  // Flip cards on click
+  const interactiveCards = document.querySelectorAll('.software-service-card');
+  interactiveCards.forEach(card => {
+    card.addEventListener('click', function() {
+      this.classList.toggle('flipped');
+    });
+  });
+  
+  // Flip back buttons
+  const flipBackButtons = document.querySelectorAll('.flip-back');
+  flipBackButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.closest('.software-service-card').classList.remove('flipped');
+    });
+  });
+  
+  // Animate timeline items on scroll
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = entry.target.dataset.phase * 0.2 + 's';
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+  });
+});
+</script>
+{% endblock %}

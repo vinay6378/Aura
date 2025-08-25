@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block title %}Events & Partner Services | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate-fade-in">Events & Partner Services</h1>
+    <p class="lead animate-fade-in-delay">From intimate gatherings to grand celebrations, we bring your vision to life with precision and elegance.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  {% if events %}
+    <!-- Dynamic Events from Database -->
+    <div class="row g-4 mb-5">
+      {% for event in events %}
+      <div class="col-lg-4 col-md-6 animate-slide-up">
+        <div class="card h-100 border-0 shadow-lg event-card">
+          <div class="event-image-placeholder luxury-gradient">
+            <div class="event-icon">
+              <i class="fas fa-heart fa-3x text-white"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ event.title }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">{{ event.date.strftime('%B %d, %Y') }}</small>
+              <span class="badge bg-warning text-dark">{{ event.category }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <!-- Static Event Services -->
+    <div class="row g-5">
+      <!-- Luxury Weddings -->
+      <div class="col-lg-6 animate-slide-up">
+        <div class="card border-0 shadow-lg h-100 event-card">
+          <div class="event-image-placeholder luxury-gradient">
+            <div class="event-icon">
+              <i class="fas fa-heart fa-3x text-white"></i>
+            </div>
+            <div class="event-badge">
+              <span class="badge bg-gold text-dark fs-6 px-3 py-2">Premium</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title text-gradient mb-3">Luxury Weddings</h3>
+            <p class="card-text lead">Create unforgettable moments with our bespoke luxury wedding planning services.</p>
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-heart text-danger me-2"></i>
+                  <span>Venue Selection</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-camera text-primary me-2"></i>
+                  <span>Photography</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-utensils text-success me-2"></i>
+                  <span>Catering</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-music text-warning me-2"></i>
+                  <span>Entertainment</span>
+                </div>
+              </div>
+            </div>
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary w-100 btn-animate">Plan Your Dream Wedding</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Corporate Events -->
+      <div class="col-lg-6 animate-slide-up-delay">
+        <div class="card border-0 shadow-lg h-100 event-card">
+          <div class="event-image-placeholder corporate-gradient">
+            <div class="event-icon">
+              <i class="fas fa-users fa-3x text-white"></i>
+            </div>
+            <div class="event-badge">
+              <span class="badge bg-info text-white fs-6 px-3 py-2">Professional</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title text-gradient mb-3">Corporate Events</h3>
+            <p class="card-text lead">Professional corporate event management for conferences, seminars, and team building.</p>
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-users text-primary me-2"></i>
+                  <span>Team Building</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-chart-line text-success me-2"></i>
+                  <span>Conferences</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-trophy text-warning me-2"></i>
+                  <span>Award Ceremonies</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-handshake text-info me-2"></i>
+                  <span>Networking</span>
+                </div>
+              </div>
+            </div>
+            <a href="{{ url_for('main.contact') }}" class="btn btn-info w-100 btn-animate">Organize Corporate Event</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parties & Celebrations -->
+      <div class="col-lg-6 animate-slide-up">
+        <div class="card border-0 shadow-lg h-100 event-card">
+          <div class="event-image-placeholder party-gradient">
+            <div class="event-icon">
+              <i class="fas fa-birthday-cake fa-3x text-white"></i>
+            </div>
+            <div class="event-badge">
+              <span class="badge bg-success text-white fs-6 px-3 py-2">Fun</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title text-gradient mb-3">Parties & Celebrations</h3>
+            <p class="card-text lead">Birthday parties, anniversaries, and special celebrations that create lasting memories.</p>
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-birthday-cake text-danger me-2"></i>
+                  <span>Birthday Parties</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-gift text-warning me-2"></i>
+                  <span>Anniversaries</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-glass-cheers text-success me-2"></i>
+                  <span>Graduations</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-star text-primary me-2"></i>
+                  <span>Special Occasions</span>
+                </div>
+              </div>
+            </div>
+            <a href="{{ url_for('main.contact') }}" class="btn btn-success w-100 btn-animate">Plan Your Party</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Virtual Events -->
+      <div class="col-lg-6 animate-slide-up-delay">
+        <div class="card border-0 shadow-lg h-100 event-card">
+          <div class="event-image-placeholder virtual-gradient">
+            <div class="event-icon">
+              <i class="fas fa-video fa-3x text-white"></i>
+            </div>
+            <div class="event-badge">
+              <span class="badge bg-purple text-white fs-6 px-3 py-2">Digital</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title text-gradient mb-3">Virtual Events</h3>
+            <p class="card-text lead">Hybrid and fully virtual events with cutting-edge technology and seamless streaming.</p>
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-video text-primary me-2"></i>
+                  <span>Live Streaming</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-laptop text-success me-2"></i>
+                  <span>Virtual Conferences</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-network-wired text-info me-2"></i>
+                  <span>Hybrid Events</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center service-feature">
+                  <i class="fas fa-mobile-alt text-warning me-2"></i>
+                  <span>Mobile Apps</span>
+                </div>
+              </div>
+            </div>
+            <a href="{{ url_for('main.contact') }}" class="btn btn-purple w-100 btn-animate">Go Virtual</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- Services Overview -->
+  <div class="row mt-5">
+    <div class="col-12 animate-fade-in">
+      <div class="card border-0 bg-gradient-primary text-white services-overview">
+        <div class="card-body text-center py-5">
+          <h2 class="mb-4">Why Choose Our Event Services?</h2>
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="service-highlight">
+                <i class="fas fa-clock fa-3x mb-3"></i>
+                <h5>On-Time Delivery</h5>
+                <p>Every event delivered on schedule with precision</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-highlight">
+                <i class="fas fa-star fa-3x mb-3"></i>
+                <h5>Premium Quality</h5>
+                <p>Luxury standards for every event detail</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-highlight">
+                <i class="fas fa-users fa-3x mb-3"></i>
+                <h5>Expert Team</h5>
+                <p>Experienced professionals handle everything</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-highlight">
+                <i class="fas fa-heart fa-3x mb-3"></i>
+                <h5>Personal Touch</h5>
+                <p>Customized experiences for your vision</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

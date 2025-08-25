@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+{% block title %}User Management - Aura Admin{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="h3 mb-0">
+                <i class="fas fa-users me-2 text-primary"></i>User Management
+            </h1>
+            <p class="text-muted">Manage all user accounts and their permissions</p>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="{{ url_for('admin.dashboard') }}" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+            </a>
+            <a href="{{ url_for('admin.export_users') }}" class="btn btn-outline-success">
+                <i class="fas fa-download me-2"></i>Export Users
+            </a>
+        </div>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="searchUsers" placeholder="Search users...">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="filterStatus">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="suspended">Suspended</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="filterRole">
+                        <option value="">All Roles</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100" onclick="applyFilters()">
+                        <i class="fas fa-filter me-2"></i>Filter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Users Table -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0">
+                <i class="fas fa-list me-2"></i>Users ({{ users.total }} total)
+            </h5>
+        </div>
+        <div class="card-body">
+            {% if users.items %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Created</th>
+                                <th>Last Login</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users.items %}
+                            <tr>
+                                <td>
+                                    <span class="badge bg-secondary">{{ user.id }}</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        {% if user.is_admin %}
+                                            <i class="fas fa-crown text-warning me-2" title="Admin"></i>
+                                        {% endif %}
+                                        <span class="fw-medium">{{ user.username }}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="text-muted">{{ user.email }}</span>
+                                </td>
+                                <td>
+                                    {% if user.is_admin %}
+                                        <span class="badge bg-warning">Admin</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">User</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if user.is_suspended %}
+                                        <span class="badge bg-danger">Suspended</span>
+                                    {% elif user.is_active %}
+                                        <span class="badge bg-success">Active</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">Inactive</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <small class="text-muted">{{ user.created_at.strftime('%Y-%m-%d') }}</small>
+                                </td>
+                                <td>
+                                    {% if user.last_login %}
+                                        <small class="text-muted">{{ user.last_login.strftime('%Y-%m-%d %H:%M') }}</small>
+                                    {% else %}
+                                        <small class="text-muted">Never</small>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="{{ url_for('admin.user_detail', user_id=user.id) }}" 
+                                           class="btn btn-sm btn-outline-primary" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        
+                                        {% if user.id != current_user.id %}
+                                            <button onclick="toggleUserStatus({{ user.id }})" 
+                                                    class="btn btn-sm btn-outline-{% if user.is_suspended %}success{% else %}warning{% endif %}"
+                                                    title="{% if user.is_suspended %}Activate{% else %}Suspend{% endif %} User">
+                                                <i class="fas fa-{% if user.is_suspended %}user-check{% else %}user-slash{% endif %}"></i>
+                                            </button>
+                                            
+                                            <button onclick="toggleUserAdmin({{ user.id }})" 
+                                                    class="btn btn-sm btn-outline-{% if user.is_admin %}danger{% else %}success{% endif %}"
+                                                    title="{% if user.is_admin %}Remove Admin{% else %}Make Admin{% endif %}">
+                                                <i class="fas fa-{% if user.is_admin %}user{% else %}crown{% endif %}"></i>
+                                            </button>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                {% if users.pages > 1 %}
+                <nav aria-label="Users pagination" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        {% if users.has_prev %}
+                            <li class="page-item">
+                                <a class="page-link" href="{{ url_for('admin.users', page=users.prev_num) }}">Previous</a>
+                            </li>
+                        {% endif %}
+                        
+                        {% for page_num in users.iter_pages() %}
+                            {% if page_num %}
+                                {% if page_num != users.page %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ url_for('admin.users', page=page_num) }}">{{ page_num }}</a>
+                                    </li>
+                                {% else %}
+                                    <li class="page-item active">
+                                        <span class="page-link">{{ page_num }}</span>
+                                    </li>
+                                {% endif %}
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <span class="page-link">...</span>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        {% if users.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="{{ url_for('admin.users', page=users.next_num) }}">Next</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+            {% else %}
+                <div class="text-center py-5">
+                    <i class="fas fa-users fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">No users found</h5>
+                    <p class="text-muted">There are no users in the system yet.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for filtering and actions -->
+<script>
+function applyFilters() {
+    const search = document.getElementById('searchUsers').value;
+    const status = document.getElementById('filterStatus').value;
+    const role = document.getElementById('filterRole').value;
+    
+    let url = new URL(window.location);
+    if (search) url.searchParams.set('search', search);
+    if (status) url.searchParams.set('status', status);
+    if (role) url.searchParams.set('role', role);
+    
+    window.location.href = url.toString();
+}
+
+function toggleUserStatus(userId) {
+    if (confirm('Are you sure you want to change this user\'s status?')) {
+        window.location.href = `/admin/user/${userId}/toggle_status`;
+    }
+}
+
+function toggleUserAdmin(userId) {
+    if (confirm('Are you sure you want to change this user\'s admin privileges?')) {
+        window.location.href = `/admin/user/${userId}/toggle_admin`;
+    }
+}
+
+// Search functionality
+document.getElementById('searchUsers').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        applyFilters();
+    }
+});
+</script>
+{% endblock %}

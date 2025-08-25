@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block title %}Home - Aura{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container text-white">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold mb-4 fade-in">Welcome to Aura</h1>
+        <p class="lead mb-4 fade-in text-white">We specialize in <strong>Web Development</strong>, <strong>Software Development</strong>, and <strong>Digital Marketing</strong>. For events, we partner with trusted specialists to deliver exceptional experiences.</p>
+        <a href="{{ url_for('main.about') }}" class="btn btn-primary btn-lg fade-in">
+          <i class="fas fa-arrow-right me-2"></i>Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Our Core Services</h2>
+        <p class="section-subtitle">We focus on what we do best - technology and digital growth</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Web Development -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card h-100 shadow-custom">
+          <div class="card-img-top bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
+            <i class="fas fa-code fa-4x text-white"></i>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              <i class="fas fa-code me-2 text-primary"></i>Web Development
+            </h5>
+            <p class="card-text">Modern websites, web applications, and digital platforms tailored to your business goals. We build responsive, scalable solutions that drive results.</p>
+            <a href="{{ url_for('main.webdev') }}" class="btn btn-outline-primary">
+              <i class="fas fa-arrow-right me-2"></i>Explore
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Software Development -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card h-100 shadow-custom">
+          <div class="card-img-top bg-success d-flex align-items-center justify-content-center" style="height: 200px;">
+            <i class="fas fa-laptop-code fa-4x text-white"></i>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              <i class="fas fa-laptop-code me-2 text-success"></i>Software Development
+            </h5>
+            <p class="card-text">Custom software solutions, desktop applications, and business automation tools. We transform your ideas into powerful, efficient software.</p>
+            <a href="{{ url_for('main.software') }}" class="btn btn-outline-success">
+              <i class="fas fa-arrow-right me-2"></i>Explore
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card service-card h-100 shadow-custom">
+          <div class="card-img-top bg-warning d-flex align-items-center justify-content-center" style="height: 200px;">
+            <i class="fas fa-chart-line fa-4x text-white"></i>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              <i class="fas fa-chart-line me-2 text-warning"></i>Digital Marketing
+            </h5>
+            <p class="card-text">Comprehensive digital marketing including advertising, promotions, social media, and growth strategies that convert visitors into customers.</p>
+            <a href="{{ url_for('main.marketing') }}" class="btn btn-outline-warning">
+              <i class="fas fa-arrow-right me-2"></i>Explore
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partner Services Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Partner Services</h2>
+        <p class="section-subtitle">We partner with trusted specialists to provide comprehensive solutions</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 bg-transparent h-100">
+          <div class="card-body text-center">
+            <div class="partner-logo mb-3">
+              <i class="fas fa-tent fa-4x text-primary"></i>
+            </div>
+            <h5 class="text-primary">Vinayak Tent & Events</h5>
+            <p class="text-muted">Your trusted partner for exceptional events and experiences. From corporate events to luxury celebrations, Vinayak Tent & Events delivers memorable moments that leave lasting impressions.</p>
+            <div class="partner-features">
+              <span class="badge bg-primary me-2">Corporate Events</span>
+              <span class="badge bg-success me-2">Weddings</span>
+              <span class="badge bg-warning me-2">Parties</span>
+              <span class="badge bg-info">Exhibitions</span>
+            </div>
+            <div class="mt-3">
+              <small class="text-muted">
+                <i class="fas fa-handshake me-1"></i>Official Partner of Aura
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="card border-0 bg-transparent h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-network-wired fa-4x text-success mb-3"></i>
+            <h5>Strategic Partnerships</h5>
+            <p class="text-muted">We maintain a network of trusted partners in various industries to provide comprehensive solutions while staying focused on our core expertise in technology and digital growth.</p>
+            <div class="partnership-benefits">
+              <div class="row text-start">
+                <div class="col-6">
+                  <small><i class="fas fa-check text-success me-2"></i>Quality Assurance</small>
+                </div>
+                <div class="col-6">
+                  <small><i class="fas fa-check text-success me-2"></i>Seamless Integration</small>
+                </div>
+                <div class="col-6">
+                  <small><i class="fas fa-check text-success me-2"></i>Trusted Partners</small>
+                </div>
+                <div class="col-6">
+                  <small><i class="fas fa-check text-success me-2"></i>One-Stop Solution</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Why Choose Aura?</h2>
+        <p class="section-subtitle">We combine creativity with technology to deliver exceptional results</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-3 text-center">
+        <div class="p-4">
+          <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+          <h5>Fast & Efficient</h5>
+          <p class="text-muted">Quick turnaround times without compromising quality</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="p-4">
+          <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+          <h5>Secure & Reliable</h5>
+          <p class="text-muted">Enterprise-grade security for your peace of mind</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="p-4">
+          <i class="fas fa-users fa-3x text-warning mb-3"></i>
+          <h5>Expert Team</h5>
+          <p class="text-muted">Experienced professionals dedicated to your success</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="p-4">
+          <i class="fas fa-headset fa-3x text-info mb-3"></i>
+          <h5>24/7 Support</h5>
+          <p class="text-muted">Round-the-clock assistance when you need it</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="mb-4">Ready to Get Started?</h2>
+        <p class="lead mb-4">Join thousands of satisfied clients who trust Aura with their technology and marketing needs.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">
+            <i class="fas fa-user-plus me-2"></i>Get Started
+          </a>
+          <a href="{{ url_for('main.contact') }}" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-envelope me-2"></i>Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

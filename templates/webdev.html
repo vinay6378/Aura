@@ -1,0 +1,676 @@
+{% extends "base.html" %}
+{% block title %}Web Development - Aura{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Animated Background -->
+<section class="hero-section position-relative overflow-hidden">
+  <div class="animated-bg">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </div>
+  <div class="container text-center position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold mb-4 fade-in">
+          <span class="text-gradient">Web Development</span>
+        </h1>
+        <p class="lead mb-4 fade-in">We don't just build websites – we create digital experiences that <strong>convert visitors into customers</strong> and <strong>ideas into success stories</strong>.</p>
+        <div class="hero-stats mb-4">
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Websites Built</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="98">0</div>
+                <div class="stat-label">Client Satisfaction</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Hours Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg fade-in pulse-animation">
+          <i class="fas fa-rocket me-2"></i>Start Your Project
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Services Showcase -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">What We Create</h2>
+        <p class="section-subtitle">Choose your digital weapon of choice</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card-interactive h-100" data-service="ecommerce">
+          <div class="card-front">
+            <div class="card-img-top bg-gradient-primary d-flex align-items-center justify-content-center" style="height: 200px;">
+              <i class="fas fa-shopping-cart fa-4x text-white"></i>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="fas fa-shopping-cart me-2 text-primary"></i>E-Commerce
+              </h5>
+              <p class="card-text">Online stores that sell like crazy</p>
+              <div class="tech-stack">
+                <span class="badge bg-light text-dark me-1">Shopify</span>
+                <span class="badge bg-light text-dark me-1">WooCommerce</span>
+                <span class="badge bg-light text-dark">Custom</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-body text-center">
+              <h5>E-Commerce Features</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Payment Gateway Integration</li>
+                <li><i class="fas fa-check text-success me-2"></i>Inventory Management</li>
+                <li><i class="fas fa-check text-success me-2"></i>Mobile-First Design</li>
+                <li><i class="fas fa-check text-success me-2"></i>SEO Optimization</li>
+              </ul>
+              <button class="btn btn-primary btn-sm flip-back">Flip Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card-interactive h-100" data-service="corporate">
+          <div class="card-front">
+            <div class="card-img-top bg-gradient-success d-flex align-items-center justify-content-center" style="height: 200px;">
+              <i class="fas fa-building fa-4x text-white"></i>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="fas fa-building me-2 text-success"></i>Corporate Websites
+              </h5>
+              <p class="card-text">Professional presence that builds trust</p>
+              <div class="tech-stack">
+                <span class="badge bg-light text-dark me-1">React</span>
+                <span class="badge bg-light text-dark me-1">Vue.js</span>
+                <span class="badge bg-light text-dark">WordPress</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-body text-center">
+              <h5>Corporate Features</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                <li><i class="fas fa-check text-success me-2"></i>Content Management</li>
+                <li><i class="fas fa-check text-success me-2"></i>Analytics Integration</li>
+                <li><i class="fas fa-check text-success me-2"></i>Lead Generation</li>
+              </ul>
+              <button class="btn btn-success btn-sm flip-back">Flip Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card-interactive h-100" data-service="webapp">
+          <div class="card-front">
+            <div class="card-img-top bg-gradient-warning d-flex align-items-center justify-content-center" style="height: 200px;">
+              <i class="fas fa-laptop-code fa-4x text-white"></i>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                <i class="fas fa-laptop-code me-2 text-warning"></i>Web Applications
+              </h5>
+              <p class="card-text">Powerful apps that solve problems</p>
+              <div class="tech-stack">
+                <span class="badge bg-light text-dark me-1">Node.js</span>
+                <span class="badge bg-light text-dark me-1">Python</span>
+                <span class="badge bg-light text-dark">PHP</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-body text-center">
+              <h5>Web App Features</h5>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Real-time Updates</li>
+                <li><i class="fas fa-check text-success me-2"></i>User Authentication</li>
+                <li><i class="fas fa-check text-success me-2"></i>Database Integration</li>
+                <li><i class="fas fa-check text-success me-2"></i>API Development</li>
+              </ul>
+              <button class="btn btn-warning btn-sm flip-back">Flip Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Development Process with Timeline -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Our Development Journey</h2>
+        <p class="section-subtitle">From idea to launch in 6 exciting phases</p>
+      </div>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker bg-primary">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Discovery & Research</h5>
+          <p>We dive deep into your business, understand your goals, and research your competition to create a winning strategy.</p>
+          <div class="timeline-duration">Week 1</div>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker bg-success">
+          <i class="fas fa-pencil-ruler"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Design & Prototyping</h5>
+          <p>Our designers create stunning mockups and interactive prototypes that bring your vision to life.</p>
+          <div class="timeline-duration">Week 2-3</div>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker bg-warning">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Development</h5>
+          <p>Our developers code your website using the latest technologies and best practices for optimal performance.</p>
+          <div class="timeline-duration">Week 4-6</div>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker bg-info">
+          <i class="fas fa-vial"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Testing & QA</h5>
+          <p>Rigorous testing across all devices and browsers to ensure everything works perfectly.</p>
+          <div class="timeline-duration">Week 7</div>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker bg-danger">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Launch & Deploy</h5>
+          <p>We launch your website with a bang! Optimized hosting, SSL certificates, and performance monitoring included.</p>
+          <div class="timeline-duration">Week 8</div>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker bg-dark">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Support & Maintenance</h5>
+          <p>Ongoing support, updates, and maintenance to keep your website running smoothly and securely.</p>
+          <div class="timeline-duration">Ongoing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technologies Showcase -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Tech Stack Arsenal</h2>
+        <p class="section-subtitle">We use cutting-edge technologies to build future-proof websites</p>
+      </div>
+    </div>
+    
+    <div class="tech-showcase">
+      <div class="tech-category">
+        <h6 class="text-primary mb-3">Frontend Technologies</h6>
+        <div class="tech-grid">
+          <div class="tech-item" data-tech="React">
+            <i class="fab fa-react fa-2x text-primary"></i>
+            <span>React</span>
+          </div>
+          <div class="tech-item" data-tech="Vue">
+            <i class="fab fa-vuejs fa-2x text-success"></i>
+            <span>Vue.js</span>
+          </div>
+          <div class="tech-item" data-tech="Angular">
+            <i class="fab fa-angular fa-2x text-danger"></i>
+            <span>Angular</span>
+          </div>
+          <div class="tech-item" data-tech="Bootstrap">
+            <i class="fab fa-bootstrap fa-2x text-primary"></i>
+            <span>Bootstrap</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h6 class="text-success mb-3">Backend Technologies</h6>
+        <div class="tech-grid">
+          <div class="tech-item" data-tech="Node.js">
+            <i class="fab fa-node-js fa-2x text-success"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="tech-item" data-tech="Python">
+            <i class="fab fa-python fa-2x text-primary"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-item" data-tech="PHP">
+            <i class="fab fa-php fa-2x text-info"></i>
+            <span>PHP</span>
+          </div>
+          <div class="tech-item" data-tech="Laravel">
+            <i class="fas fa-fire fa-2x text-warning"></i>
+            <span>Laravel</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h6 class="text-warning mb-3">Databases & Cloud</h6>
+        <div class="tech-grid">
+          <div class="tech-item" data-tech="MongoDB">
+            <i class="fas fa-leaf fa-2x text-success"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="tech-item" data-tech="PostgreSQL">
+            <i class="fas fa-database fa-2x text-primary"></i>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="tech-item" data-tech="AWS">
+            <i class="fab fa-aws fa-2x text-warning"></i>
+            <span>AWS</span>
+          </div>
+          <div class="tech-item" data-tech="Docker">
+            <i class="fab fa-docker fa-2x text-info"></i>
+            <span>Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section with Floating Elements -->
+<section class="py-5 bg-primary text-white position-relative overflow-hidden">
+  <div class="floating-elements">
+    <div class="floating-element fe-1"></div>
+    <div class="floating-element fe-2"></div>
+    <div class="floating-element fe-3"></div>
+  </div>
+  <div class="container text-center position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="mb-4">Ready to Build Something Amazing?</h2>
+        <p class="lead mb-4">Let's turn your digital dreams into reality. Our team is ready to create a website that not only looks stunning but also drives results.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="{{ url_for('main.contact') }}" class="btn btn-light btn-lg pulse-animation">
+            <i class="fas fa-paper-plane me-2"></i>Start Your Project
+          </a>
+          <a href="{{ url_for('main.software') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-laptop-code me-2"></i>Software Development
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS for Interactive Elements -->
+<style>
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floating-shapes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+.shape-4 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 30%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.hero-stats {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  color: white;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.service-card-interactive {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+}
+
+.service-card-interactive.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.service-card-interactive.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 55%;
+}
+
+.timeline-duration {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: #667eea;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.tech-showcase {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tech-category {
+  margin-bottom: 40px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.tech-item {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.tech-item span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floating-element {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.fe-1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.fe-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+.fe-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 30%;
+  animation-delay: 6s;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(180deg); }
+}
+</style>
+
+<!-- JavaScript for Interactive Features -->
+<script>
+// Animated Counter
+function animateCounter(element, target) {
+  let current = 0;
+  const increment = target / 100;
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    element.textContent = Math.floor(current);
+  }, 20);
+}
+
+// Initialize counters when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const counters = document.querySelectorAll('.stat-number');
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    animateCounter(counter, target);
+  });
+  
+  // Flip cards on click
+  const interactiveCards = document.querySelectorAll('.service-card-interactive');
+  interactiveCards.forEach(card => {
+    card.addEventListener('click', function() {
+      this.classList.toggle('flipped');
+    });
+  });
+  
+  // Flip back buttons
+  const flipBackButtons = document.querySelectorAll('.flip-back');
+  flipBackButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.closest('.service-card-interactive').classList.remove('flipped');
+    });
+  });
+});
+</script>
+{% endblock %}

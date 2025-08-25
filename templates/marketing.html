@@ -1,0 +1,816 @@
+{% extends "base.html" %}
+{% block title %}Digital Marketing - Aura{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Particle Background -->
+<section class="hero-section position-relative overflow-hidden">
+  <div class="particle-background">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  <div class="container text-center position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold mb-4 fade-in">
+          <span class="text-warning">Digital Marketing</span>
+        </h1>
+        <p class="lead mb-4 fade-in">We don't just market – we create <strong>digital movements</strong> that make your brand impossible to ignore and your competitors impossible to catch up with.</p>
+        <div class="marketing-stats mb-4">
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="150">0</div>
+                <div class="stat-label">Campaigns</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="250">0</div>
+                <div class="stat-label">% ROI Average</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">Million Impressions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary btn-lg fade-in pulse-animation">
+          <i class="fas fa-rocket me-2"></i>Launch Your Campaign
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Marketing Services -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Marketing Services That Convert</h2>
+        <p class="section-subtitle">Choose your marketing superpower</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6 col-md-6">
+        <div class="marketing-service-card h-100" data-service="social">
+          <div class="service-icon">
+            <i class="fas fa-share-alt fa-3x text-primary"></i>
+          </div>
+          <div class="service-content">
+            <h4>Social Media Marketing</h4>
+            <p>Dominate social platforms with content that goes viral and builds communities around your brand.</p>
+            <div class="service-features">
+              <span class="feature-tag">Content Creation</span>
+              <span class="feature-tag">Community Management</span>
+              <span class="feature-tag">Influencer Partnerships</span>
+              <span class="feature-tag">Viral Campaigns</span>
+            </div>
+            <div class="platform-icons">
+              <i class="fab fa-facebook text-primary"></i>
+              <i class="fab fa-instagram text-danger"></i>
+              <i class="fab fa-twitter text-info"></i>
+              <i class="fab fa-linkedin text-primary"></i>
+              <i class="fab fa-tiktok text-dark"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 col-md-6">
+        <div class="marketing-service-card h-100" data-service="ppc">
+          <div class="service-icon">
+            <i class="fas fa-ad fa-3x text-success"></i>
+          </div>
+          <div class="service-content">
+            <h4>PPC & Advertising</h4>
+            <p>Targeted ads that reach your perfect audience and drive conversions with laser precision.</p>
+            <div class="service-features">
+              <span class="feature-tag">Google Ads</span>
+              <span class="feature-tag">Facebook Ads</span>
+              <span class="feature-tag">Remarketing</span>
+              <span class="feature-tag">Conversion Optimization</span>
+            </div>
+            <div class="platform-icons">
+              <i class="fab fa-google text-success"></i>
+              <i class="fab fa-facebook text-primary"></i>
+              <i class="fab fa-instagram text-danger"></i>
+              <i class="fab fa-linkedin text-primary"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 col-md-6">
+        <div class="marketing-service-card h-100" data-service="seo">
+          <div class="service-icon">
+            <i class="fas fa-search fa-3x text-warning"></i>
+          </div>
+          <div class="service-content">
+            <h4>SEO & Content Marketing</h4>
+            <p>Dominate search results with content that ranks, converts, and establishes your authority.</p>
+            <div class="service-features">
+              <span class="feature-tag">Keyword Research</span>
+              <span class="feature-tag">Content Strategy</span>
+              <span class="feature-tag">Technical SEO</span>
+              <span class="feature-tag">Link Building</span>
+            </div>
+            <div class="platform-icons">
+              <i class="fab fa-google text-success"></i>
+              <i class="fas fa-chart-line text-warning"></i>
+              <i class="fas fa-link text-info"></i>
+              <i class="fas fa-pen-fancy text-primary"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 col-md-6">
+        <div class="marketing-service-card h-100" data-service="email">
+          <div class="service-icon">
+            <i class="fas fa-envelope fa-3x text-info"></i>
+          </div>
+          <div class="service-content">
+            <h4>Email Marketing</h4>
+            <p>Build relationships and drive sales with email campaigns that your subscribers actually want to read.</p>
+            <div class="service-features">
+              <span class="feature-tag">Automation</span>
+              <span class="feature-tag">Segmentation</span>
+              <span class="feature-tag">A/B Testing</span>
+              <span class="feature-tag">Personalization</span>
+            </div>
+            <div class="platform-icons">
+              <i class="fas fa-envelope text-info"></i>
+              <i class="fas fa-robot text-success"></i>
+              <i class="fas fa-chart-bar text-warning"></i>
+              <i class="fas fa-users text-primary"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marketing Process with Animated Steps -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Our Marketing Process</h2>
+        <p class="section-subtitle">The proven 5-step process that delivers results</p>
+      </div>
+    </div>
+    
+    <div class="marketing-process">
+      <div class="process-step" data-step="1">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h5><i class="fas fa-search me-2 text-primary"></i>Research & Analysis</h5>
+          <p>Deep dive into your market, competitors, and audience to create a winning strategy.</p>
+          <div class="step-duration">Week 1-2</div>
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="2">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h5><i class="fas fa-lightbulb me-2 text-warning"></i>Strategy & Planning</h5>
+          <p>Develop comprehensive marketing strategies tailored to your business goals and budget.</p>
+          <div class="step-duration">Week 3</div>
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="3">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h5><i class="fas fa-paint-brush me-2 text-success"></i>Creative Development</h5>
+          <p>Create compelling content, ads, and campaigns that capture attention and drive action.</p>
+          <div class="step-duration">Week 4-5</div>
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="4">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h5><i class="fas fa-rocket me-2 text-danger"></i>Launch & Optimize</h5>
+          <p>Execute campaigns across all channels and continuously optimize for maximum performance.</p>
+          <div class="step-duration">Week 6-8</div>
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="5">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h5><i class="fas fa-chart-line me-2 text-info"></i>Monitor & Scale</h5>
+          <p>Track results, analyze data, and scale successful campaigns for exponential growth.</p>
+          <div class="step-duration">Ongoing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results Showcase -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Results That Speak</h2>
+        <p class="section-subtitle">Real results from real campaigns</p>
+      </div>
+    </div>
+    
+    <div class="results-showcase">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="result-card text-center">
+            <div class="result-icon">
+              <i class="fas fa-chart-line fa-3x text-success"></i>
+            </div>
+            <div class="result-number" data-target="250">0</div>
+            <div class="result-label">% Average ROI</div>
+            <div class="result-description">Across all marketing campaigns</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="result-card text-center">
+            <div class="result-icon">
+              <i class="fas fa-users fa-3x text-primary"></i>
+            </div>
+            <div class="result-number" data-target="25">0</div>
+            <div class="result-label">K New Customers</div>
+            <div class="result-description">Generated through our campaigns</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="result-card text-center">
+            <div class="result-icon">
+              <i class="fas fa-globe fa-3x text-warning"></i>
+            </div>
+            <div class="result-number" data-target="1">0</div>
+            <div class="result-label">Million Impressions</div>
+            <div class="result-description">Reached across all platforms</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="result-card text-center">
+            <div class="result-icon">
+              <i class="fas fa-trophy fa-3x text-danger"></i>
+            </div>
+            <div class="result-number" data-target="95">0</div>
+            <div class="result-label">% Client Retention</div>
+            <div class="result-description">Long-term partnerships</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marketing Tools & Platforms -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="section-title text-gradient">Tools & Platforms We Master</h2>
+        <p class="section-subtitle">We're certified experts in the industry's leading marketing tools</p>
+      </div>
+    </div>
+    
+    <div class="tools-showcase">
+      <div class="tool-category">
+        <h6 class="text-primary mb-3">Analytics & Tracking</h6>
+        <div class="tools-grid">
+          <div class="tool-item" data-tool="Google Analytics">
+            <i class="fab fa-google fa-2x text-success"></i>
+            <span>Google Analytics</span>
+          </div>
+          <div class="tool-item" data-tool="Facebook Pixel">
+            <i class="fab fa-facebook fa-2x text-primary"></i>
+            <span>Facebook Pixel</span>
+          </div>
+          <div class="tool-item" data-tool="Hotjar">
+            <i class="fas fa-fire fa-2x text-warning"></i>
+            <span>Hotjar</span>
+          </div>
+          <div class="tool-item" data-tool="SEMrush">
+            <i class="fas fa-search fa-2x text-info"></i>
+            <span>SEMrush</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tool-category">
+        <h6 class="text-success mb-3">Advertising Platforms</h6>
+        <div class="tools-grid">
+          <div class="tool-item" data-tool="Google Ads">
+            <i class="fab fa-google fa-2x text-success"></i>
+            <span>Google Ads</span>
+          </div>
+          <div class="tool-item" data-tool="Facebook Ads">
+            <i class="fab fa-facebook fa-2x text-primary"></i>
+            <span>Facebook Ads</span>
+          </div>
+          <div class="tool-item" data-tool="LinkedIn Ads">
+            <i class="fab fa-linkedin fa-2x text-primary"></i>
+            <span>LinkedIn Ads</span>
+          </div>
+          <div class="tool-item" data-tool="TikTok Ads">
+            <i class="fab fa-tiktok fa-2x text-dark"></i>
+            <span>TikTok Ads</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tool-category">
+        <h6 class="text-warning mb-3">Marketing Automation</h6>
+        <div class="tools-grid">
+          <div class="tool-item" data-tool="Mailchimp">
+            <i class="fas fa-envelope fa-2x text-orange"></i>
+            <span>Mailchimp</span>
+          </div>
+          <div class="tool-item" data-tool="HubSpot">
+            <i class="fas fa-hubspot fa-2x text-orange"></i>
+            <span>HubSpot</span>
+          </div>
+          <div class="tool-item" data-tool="Zapier">
+            <i class="fas fa-bolt fa-2x text-warning"></i>
+            <span>Zapier</span>
+          </div>
+          <div class="tool-item" data-tool="ConvertKit">
+            <i class="fas fa-paper-plane fa-2x text-success"></i>
+            <span>ConvertKit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section with Animated Background -->
+<section class="py-5 bg-primary text-white position-relative overflow-hidden">
+  <div class="animated-marketing-bg">
+    <div class="marketing-element me-1"></div>
+    <div class="marketing-element me-2"></div>
+    <div class="marketing-element me-3"></div>
+  </div>
+  <div class="container text-center position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="mb-4">Ready to Dominate Your Market?</h2>
+        <p class="lead mb-4">Let's create marketing campaigns that don't just reach your audience – they create movements around your brand.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="{{ url_for('main.contact') }}" class="btn btn-light btn-lg pulse-animation">
+            <i class="fas fa-paper-plane me-2"></i>Start Your Campaign
+          </a>
+          <a href="{{ url_for('main.webdev') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-code me-2"></i>Web Development
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS for Marketing Page -->
+<style>
+.particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  top: 30%;
+  right: 30%;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+  width: 50px;
+  height: 50px;
+  bottom: 40%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.particle:nth-child(6) {
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 30%;
+  animation-delay: 5s;
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-30px) rotate(180deg) scale(1.1); }
+}
+
+.marketing-stats {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  color: white;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.marketing-service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.marketing-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.marketing-service-card:hover::before {
+  left: 100%;
+}
+
+.marketing-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-content h4 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.service-content p {
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.feature-tag {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.platform-icons {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.platform-icons i {
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+.platform-icons i:hover {
+  transform: scale(1.2);
+}
+
+.marketing-process {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.process-step:nth-child(even) {
+  flex-direction: row-reverse;
+  transform: translateX(50px);
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 20px;
+  flex-shrink: 0;
+}
+
+.step-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.step-content h5 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.step-duration {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.result-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.result-card:hover {
+  transform: translateY(-10px);
+}
+
+.result-icon {
+  margin-bottom: 20px;
+}
+
+.result-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.result-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.result-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tools-showcase {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tool-category {
+  margin-bottom: 40px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.tool-item {
+  text-align: center;
+  padding: 25px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.tool-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.tool-item span {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.animated-marketing-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.marketing-element {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: marketing-float 10s ease-in-out infinite;
+}
+
+.me-1 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.me-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 4s;
+}
+
+.me-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 30%;
+  animation-delay: 8s;
+}
+
+@keyframes marketing-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-40px) rotate(180deg) scale(1.2); }
+}
+</style>
+
+<!-- JavaScript for Marketing Page -->
+<script>
+// Animated Counter for Results
+function animateCounter(element, target) {
+  let current = 0;
+  const isText = element.textContent.includes('K') || element.textContent.includes('M');
+  
+  if (isText) {
+    // Handle text-based targets (K, M)
+    const targetValue = target;
+    element.textContent = targetValue;
+    return;
+  }
+  
+  const increment = target / 100;
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    element.textContent = Math.floor(current);
+  }, 20);
+}
+
+// Initialize counters when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const counters = document.querySelectorAll('.stat-number, .result-number');
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    animateCounter(counter, target);
+  });
+  
+  // Animate process steps on scroll
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = entry.target.dataset.step * 0.2 + 's';
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.process-step').forEach(step => {
+    observer.observe(step);
+  });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}PPC & Google Ads | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">PPC & Google Ads</h1>
+    <p class="Text-white">Drive immediate results with targeted paid advertising campaigns that maximize your ROI.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- Main Content -->
+    <div class="col-lg-8">
+      <h2 class="section-title text-gradient mb-4">Pay-Per-Click Advertising</h2>
+      <p class="lead">Our PPC experts create and manage high-converting campaigns across Google Ads, Facebook Ads, Instagram Ads, and YouTube advertising to drive qualified traffic and sales.</p>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-google fa-3x text-success mb-3"></i>
+              <h5 class="card-title">Google Ads</h5>
+              <p class="card-text">Search ads, display campaigns, shopping ads, and Google Shopping for maximum visibility and conversions.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-facebook fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Facebook & Instagram Ads</h5>
+              <p class="card-text">Targeted social media advertising with advanced audience segmentation, retargeting, and visual content optimization.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fab fa-youtube fa-3x text-danger mb-3"></i>
+              <h5 class="card-title">YouTube Advertising</h5>
+              <p class="card-text">Video ads, TrueView campaigns, bumper ads, and YouTube influencer partnerships for engaging video content marketing.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-search fa-3x text-info mb-3"></i>
+              <h5 class="card-title">Search Engine Marketing</h5>
+              <p class="card-text">Keyword research, ad copy optimization, bid management, and landing page optimization for search campaigns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5">
+        <h3 class="text-gradient">PPC Campaign Management:</h3>
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Campaign Strategy & Setup</li>
+              <li><i class="fas fa-check text-success me-2"></i>Keyword Research & Selection</li>
+              <li><i class="fas fa-check text-success me-2"></i>Ad Copy Creation</li>
+              <li><i class="fas fa-check text-success me-2"></i>Landing Page Optimization</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Bid Management</li>
+              <li><i class="fas fa-check text-success me-2"></i>Performance Monitoring</li>
+              <li><i class="fas fa-check text-success me-2"></i>A/B Testing</li>
+              <li><i class="fas fa-check text-success me-2"></i>ROI Optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5">
+        <h3 class="text-gradient">Advertising Platforms We Specialize In:</h3>
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fab fa-google text-success me-2"></i>Google Ads (Search & Display)</li>
+              <li><i class="fab fa-facebook text-primary me-2"></i>Facebook Ads</li>
+              <li><i class="fab fa-instagram text-danger me-2"></i>Instagram Ads</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fab fa-youtube text-danger me-2"></i>YouTube Advertising</li>
+              <li><i class="fab fa-linkedin text-info me-2"></i>LinkedIn Ads</li>
+              <li><i class="fas fa-shopping-cart text-warning me-2"></i>Google Shopping</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">PPC Benefits</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-rocket text-success me-2"></i>Immediate Results</li>
+            <li class="mb-2"><i class="fas fa-bullseye text-success me-2"></i>Precise Targeting</li>
+            <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i>Measurable ROI</li>
+            <li class="mb-2"><i class="fas fa-users text-success me-2"></i>Qualified Traffic</li>
+            <li class="mb-2"><i class="fas fa-cog text-success me-2"></i>Full Control</li>
+          </ul>
+          
+          <div class="mt-4">
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary w-100">Get PPC Quote</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card border-0 shadow-sm mt-3">
+        <div class="card-body">
+          <h6 class="card-title text-success">Free PPC Audit</h6>
+          <p class="card-text small">Get a comprehensive analysis of your current PPC campaigns and discover optimization opportunities.</p>
+          <a href="{{ url_for('main.contact') }}" class="btn btn-outline-success btn-sm w-100">Request Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

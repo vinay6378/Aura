@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Marketing Analytics | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Marketing Analytics & Reporting</h1>
+    <p class="Text-white">Data-driven insights to optimize your marketing campaigns and maximize ROI.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-5">
+    <!-- Main Content -->
+    <div class="col-lg-8">
+      <h2 class="section-title text-gradient mb-4">Analytics & Performance Tracking</h2>
+      <p class="lead">We provide comprehensive analytics and reporting to help you understand your marketing performance and make data-driven decisions.</p>
+      
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Performance Tracking</h5>
+              <p class="card-text">Monitor KPIs, conversion rates, and campaign performance across all marketing channels.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-users fa-3x text-success mb-3"></i>
+              <h5 class="card-title">Audience Insights</h5>
+              <p class="card-text">Understand your target audience behavior, demographics, and engagement patterns.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-search fa-3x text-warning mb-3"></i>
+              <h5 class="card-title">ROI Analysis</h5>
+              <p class="card-text">Track return on investment for all marketing campaigns and optimize budget allocation.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <i class="fas fa-cogs fa-3x text-info mb-3"></i>
+              <h5 class="card-title">A/B Testing</h5>
+              <p class="card-text">Test different marketing strategies and optimize based on data-driven results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5">
+        <h3 class="text-gradient">Analytics Services Include:</h3>
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Google Analytics Setup</li>
+              <li><i class="fas fa-check text-success me-2"></i>Conversion Tracking</li>
+              <li><i class="fas fa-check text-success me-2"></i>Custom Dashboards</li>
+              <li><i class="fas fa-check text-success me-2"></i>Monthly Reports</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>Competitor Analysis</li>
+              <li><i class="fas fa-check text-success me-2"></i>Market Research</li>
+              <li><i class="fas fa-check text-success me-2"></i>Trend Analysis</li>
+              <li><i class="fas fa-check text-success me-2"></i>Recommendations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Why Analytics Matter</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i>Data-Driven Decisions</li>
+            <li class="mb-2"><i class="fas fa-bullseye text-success me-2"></i>Optimize Performance</li>
+            <li class="mb-2"><i class="fas fa-dollar-sign text-success me-2"></i>Maximize ROI</li>
+            <li class="mb-2"><i class="fas fa-users text-success me-2"></i>Better Targeting</li>
+            <li class="mb-2"><i class="fas fa-rocket text-success me-2"></i>Continuous Improvement</li>
+          </ul>
+          
+          <div class="mt-4">
+            <a href="{{ url_for('main.contact') }}" class="btn btn-primary w-100">Get Analytics Report</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card border-0 shadow-sm mt-3">
+        <div class="card-body">
+          <h6 class="card-title text-info">Free Analytics Audit</h6>
+          <p class="card-text small">Get a comprehensive analysis of your current marketing performance and discover optimization opportunities.</p>
+          <a href="{{ url_for('main.contact') }}" class="btn btn-outline-info btn-sm w-100">Request Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}About | Aura{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate-fade-in">About Aura</h1>
+    <p class="lead animate-fade-in-delay text-white">We bring innovative ideas to life with professionalism and creativity.</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6 animate-slide-up">
+      <div class="about-content">
+        <h2 class="section-title text-gradient mb-4">Our Story</h2>
+        <p class="lead mb-4">
+          Aura is a creative agency specializing in <strong>Events</strong>, 
+          <strong>Web Development</strong>, and <strong>Digital Marketing</strong>.  
+          Our mission is to bring innovative ideas to life with professionalism 
+          and creativity.
+        </p>
+        <p class="mb-4">
+          We combine design, technology, and strategy to deliver solutions 
+          that make brands stand out. Whether it's organizing a corporate 
+          event, building a modern website, or launching a marketing campaign — 
+          Aura does it all.
+        </p>
+        
+        <div class="row g-4 mt-4">
+          <div class="col-6">
+            <div class="feature-highlight">
+              <i class="fas fa-calendar-check fa-2x text-primary mb-3"></i>
+              <h5>Event Excellence</h5>
+              <p>Creating unforgettable experiences</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="feature-highlight">
+              <i class="fas fa-code fa-2x text-success mb-3"></i>
+              <h5>Web Development</h5>
+              <p>Modern, responsive websites</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="feature-highlight">
+              <i class="fas fa-chart-line fa-2x text-warning mb-3"></i>
+              <h5>Digital Marketing</h5>
+              <p>Data-driven strategies</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="feature-highlight">
+              <i class="fas fa-users fa-2x text-info mb-3"></i>
+              <h5>Team Collaboration</h5>
+              <p>Expert professionals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6 animate-slide-up-delay">
+      <div class="about-visual">
+        <div class="about-image-placeholder">
+          <div class="about-icon">
+            <i class="fas fa-star fa-4x text-warning"></i>
+          </div>
+          <div class="floating-elements">
+            <div class="floating-element" style="--delay: 0s">
+              <i class="fas fa-heart text-danger"></i>
+            </div>
+            <div class="floating-element" style="--delay: 1s">
+              <i class="fas fa-lightbulb text-warning"></i>
+            </div>
+            <div class="floating-element" style="--delay: 2s">
+              <i class="fas fa-rocket text-primary"></i>
+            </div>
+            <div class="floating-element" style="--delay: 3s">
+              <i class="fas fa-gem text-info"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Values Section -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="card border-0 bg-gradient-primary text-white values-section">
+        <div class="card-body text-center py-5">
+          <h2 class="mb-4">Our Core Values</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="value-item">
+                <i class="fas fa-lightbulb fa-3x mb-3"></i>
+                <h5>Innovation</h5>
+                <p>Pushing boundaries with creative solutions</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="value-item">
+                <i class="fas fa-handshake fa-3x mb-3"></i>
+                <h5>Integrity</h5>
+                <p>Building trust through honest partnerships</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="value-item">
+                <i class="fas fa-trophy fa-3x mb-3"></i>
+                <h5>Excellence</h5>
+                <p>Delivering quality in everything we do</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
